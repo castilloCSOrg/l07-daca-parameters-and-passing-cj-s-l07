@@ -66,6 +66,21 @@ static final String LABEL_SURNAME = "Surname", LABEL_GIVEN_NAME = "Given Name", 
         expireDay = 2;
         expireYear = 2022;
 
+        //Using Utility Belt
+        //Birthdate
+        birthMonth=UtilityBelt.readString("What number month were your born on? (ex:JAN) ", 3, 3).toUpperCase();
+        birthDay=UtilityBelt.readInt("What is the day were you born on? ", 1, 31);
+        birthYear=UtilityBelt.readInt("What year were you born? ",1900, 2024);
+        //Sex
+        sex=UtilityBelt.readChar("What is your sex?(M or F) ","M F");
+        //Valid from card
+        validMonth=UtilityBelt.readInt("What number month is your card valid from? ", 1, 12);
+        validDay=UtilityBelt.readInt("What is the day your card if valid from? ", 1, 31);
+        validYear=UtilityBelt.readInt("What year is your card valid from? ",2000, 3000);
+        //Expiry for card
+        expireMonth=UtilityBelt.readInt("What number month does your card expires? ", 1, 12);
+        expireDay=UtilityBelt.readInt("What is the day your card expires? ", 1, 31);
+        expireYear=UtilityBelt.readInt("What year does your card expires? ",2000, 3000);
         //Strings to help clean up long printf's below
         uscisNum = String.format("%03d-%03d-%03d", uscisNum1, uscisNum2, uscisNum3);
         dateOfBirth = String.format("%02d %s %d", birthDay, birthMonth, birthYear);
